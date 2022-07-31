@@ -1,0 +1,61 @@
+{
+  "name": "node-blueprint",
+  "version": "0.1.0",
+  "private": true,
+  "description": "这是一个可视化蓝图（流程图）程序编辑器",
+  "author": "梦欤 <1501076885@qq.com>",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-electron-dev": "cross-env NODE_ENV=development webpack --progress --color --colors --watch --config build-electron/webpack.dev.conf.js",
+    "build-electron-prod": "cross-env NODE_ENV=production node build-electron/build.js",
+    "electron-dev": "cross-env NODE_ENV=development electron ./dist/development/",
+    "electron-prod": "cross-env NODE_ENV=production electron ./dist/production/",
+    "pack": "electron-builder build",
+    "pack-win32": "electron-builder build --ia32",
+    "pack-win64": "electron-builder build --x64"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.0",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-contextmenujs": "^1.3.13",
+    "vue-property-decorator": "^9.1.2",
+    "vue-router": "^3.2.0",
+    "vue-toasted": "^1.1.28",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "cross-env": "^7.0.3",
+    "electron": "^11.2.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "typescript": "~3.9.3",
+    "vue-happy-scroll": "^2.1.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.0",
+    "webpack-bundle-analyzer": "^3.5.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2",
+    "worker-loader": "^3.0.0"
+  },
+  "engines": {
+    "node": "= 14.19.0"
+  }
+}

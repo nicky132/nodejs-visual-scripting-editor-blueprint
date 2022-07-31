@@ -1,0 +1,21 @@
+@import './menu';
+@import './utils';
+@import './root';
+@import './scroll';
+@import './utilities';
+@import './anim';
+@import './window';
+@import './block';
+@import './editor';
+@import './dock';
+@import './console';
+@import './el-fix';
+@import './small-widgets.scss';
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,135 @@
+@import './root';
+
+.menu-bar {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  height: $top-menu-height;
+  -webkit-app-region: no-drag;
+  font-size: 12px;
+
+  > .menu-bar-item {
+    position: relative;
+    height: $top-menu-height;
+  }
+}
+.menu-bar-item {
+  position: relative;
+  z-index: 5;
+  color: #333;
+  display: inline-block;
+  -webkit-app-region: no-drag;
+  vertical-align: middle;
+
+  &.open {
+    .menu-title { 
+      background: white;
+      color: #333;
+    }
+    > .menu-list {
+      display: block;
+    }
+  }
+
+  > .menu-list {
+    display: none;
+    position: absolute;
+  }
+}
+.menu-title {
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 10px;
+  z-index: 10;
+  color: #fff;
+  position: relative;
+  vertical-align: middle;
+}
+
+.menu-context {
+  position: absolute;
+  white-space: nowrap;
+  background: white;
+  padding: 7px 0;
+  border-radius: 0 3px 3px 3px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+.menu-list {
+  display: none;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  white-space: nowrap;
+  background: white;
+  padding: 7px 0;
+  border-radius: 0 3px 3px 3px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  max-width: 450px;
+
+  &.show {
+    display: inline-block;
+  }
+  &.hide {
+    display: none;
+  }
+
+  .menu-list {
+    top: -7px;
+    left: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+
+  .menu-item {
+    position: relative;
+    overflow: visible;
+    line-height: 22px;
+    padding: 5px 69px 5px 25px;
+    cursor: default;
+    color: #333;
+    max-width: 450px;
+    text-overflow: ellipsis;
+
+    i {
+      position: absolute;
+      display: inline-block;
+      left: 5px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      font-size: 17px;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    &:hover:not(.disabled) {
+      background: rgba(0,0,0,0.1);
+      color: #000;
+    }
+
+    .menu-arrow {
+      position: absolute;
+      right: 10px;
+      top: 2px;
+      padding: 5px;
+    }
+    .shortcut {
+      display: block;
+      position: absolute;
+      right: 10px;
+      padding: 5px;
+      background: rgba(0,0,0, 0.1);
+      top: 6px;
+      text-align: center;
+      font-size: 10px;
+      line-height: 120%;
+    }
+  }
+  .separator {
+    margin: 5px 0;
+    border-top: solid #ddd 1px;
+  }
+}
